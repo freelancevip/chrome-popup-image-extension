@@ -1,0 +1,27 @@
+{
+  "name": "chrome-popup-image-extension",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "Выводит посреди вкладки картинку при нажатии забинженой кнопки",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "web_accessible_resources": [
+    "image.png"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "css": [
+        "src/inject/inject.css"
+      ],
+      "js": [
+        "src/inject/inject.js"
+      ]
+    }
+  ]
+}
